@@ -17,8 +17,6 @@ no-log-ix-name = []
 cpi = ["no-entrypoint"]
 default = []
 
-[profile.release]
-overflow-checks = true
 
 [dependencies]
 bs58 = "0.3.1"

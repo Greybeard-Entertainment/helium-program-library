@@ -17,22 +17,19 @@ no-log-ix-name = []
 cpi = ["no-entrypoint"]
 default = []
 
-[profile.release]
-overflow-checks = true
-
 [dependencies]
-anchor-lang = { workspace = true }
-anchor-spl = { workspace = true }
-mpl-token-metadata = { workspace = true }
+anchor-lang = { version = "0.28.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.28.0", features = ["mint", "token"] }
+mpl-token-metadata = { version = "3.2.0" }
 voter-stake-registry = { path = "../voter-stake-registry", features = ["no-entrypoint", "cpi"] }
-shared-utils = { workspace = true }
-circuit-breaker = { workspace = true }
+shared-utils = { version = "0.0.1" , path="../../utils/shared-utils/" }
+circuit-breaker = { version = "0.1.0", path = "../circuit-breaker/", features = ["cpi"] }
 treasury-management = { path = "../treasury-management", features = ["cpi"] }
 
 time = "0.3.17"
 spl-governance-tools = { rev = "0377e6452fef0c84148e2d4de6bef08dac7ca16e", git = "https://github.com/solana-labs/solana-program-library.git", version = "0.1.3" }
-solana-security-txt = { workspace = true }
-default-env = { workspace = true }
+solana-security-txt = "1.1.1"
+default-env = "0.1.1"
 
 [dev-dependencies]
 rust_decimal = "=1.26.0"

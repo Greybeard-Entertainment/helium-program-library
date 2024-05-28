@@ -1345,6 +1345,7 @@ dependencies = [
  "helium-sub-daos",
  "lazy-transactions",
  "pyth-sdk-solana",
+ "shared-utils",
  "solana-security-txt",
 ]
 

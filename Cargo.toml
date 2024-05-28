@@ -7,6 +7,7 @@ members = [
 exclude = [
   "deps/metaplex-program-library/bubblegum/program",
   "deps/metaplex-program-library/token-metadata/program",
+  # "programs/lazy-distributor",
   "utils/ecc-sig-verifier",
   "utils/migration-tx-executor",
   "utils/vehnt",
@@ -16,6 +17,10 @@ exclude = [
   "utils/active-hotspot-oracle",
   "utils/backfill-onboarding-fees",
 ]
+resolver = "2"
+
+[profile.release]
+overflow-checks = true
 
 [workspace.dependencies]
 anchor-lang = { version = "0.28.0", features = ["init-if-needed"] }

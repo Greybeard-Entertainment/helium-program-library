@@ -17,15 +17,13 @@ no-log-ix-name = []
 cpi = ["no-entrypoint"]
 default = []
 
-[profile.release]
-overflow-checks = true
-
 [dependencies]
-anchor-lang = { workspace = true }
-anchor-spl = { workspace = true }
-helium-sub-daos = { workspace = true }
-circuit-breaker = { workspace = true }
 pyth-sdk-solana = { version = "0.8.0" }
 lazy-transactions = { path = "../lazy-transactions", features = ["cpi"] }
-solana-security-txt = { workspace = true }
-default-env = { workspace = true }
+anchor-lang = { version = "0.28.0", features = ["init-if-needed"] }
+anchor-spl = { version = "0.28.0", features = ["mint", "token"] }
+solana-security-txt = "1.1.1"
+default-env = "0.1.1"
+shared-utils = { path = "../../utils/shared-utils" }
+circuit-breaker = { path = "../circuit-breaker", features = ["cpi"] }
+helium-sub-daos = { path = "../helium-sub-daos", features = ["cpi"] }
