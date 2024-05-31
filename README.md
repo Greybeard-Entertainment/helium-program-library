@@ -181,7 +181,7 @@ $: yarn watch
 5. Bootstrap localnet
 
 ```
-$: . ./scripts/bootstrap-localnet.sh
+$: ./scripts/bootstrap.sh localnet
 ```
 
 6. Run tests against localnet
